@@ -2,7 +2,8 @@ node-linda-mac-say
 ==================
 call Mac OSX's "say" command with [linda-socket.io](https://github.com/node-linda/linda-socket.io)
 
-- watch {type: "say"} and exec "say #{tuple.value}"
+- watch tuple {type: "say"}
+  - say tuple.value
 - https://github.com/node-linda/node-linda-mac-say
 
 
