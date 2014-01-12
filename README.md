@@ -30,3 +30,11 @@ write {type: "say", value: "hello"} from following URL
     % npm start
 
 
+## Install as Service
+
+    % gem install foreman
+
+for launchd (Mac OSX)
+
+    % sudo foreman export launchd /Library/LaunchDaemons/ --app node-linda-mac-say -u `whoami`
+    % sudo launchctl load -w /Library/LaunchDaemons/node-linda-mac-say-main-1.plist
