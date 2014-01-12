@@ -1,7 +1,7 @@
 {
   "name": "node-linda-mac-say",
   "version": "0.0.0",
-  "description": "call Mac OSX Say command with linda-socket.io",
+  "description": "call Mac OSX's \"say\" command with linda-socket.io",
   "main": "node-linda-mac-say.coffee",
   "scripts": {
     "start": "node_modules/coffee-script/bin/coffee node-linda-mac-say.coffee"
