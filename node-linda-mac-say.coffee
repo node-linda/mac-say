@@ -9,7 +9,15 @@ linda = new LindaClient().connect(socket)
 ts = linda.tuplespace(process.env.LINDA_SPACE)
 
 linda.io.on 'connect', ->
-  console.log "connect!! #{process.env.LINDA_BASE}"
-  ts.watch {'type': 'say'}, (err, tuple) ->
+
+  console.log "connect!!"
+  console.log "watching {type: 'say'} in tuplespace '#{ts.name}'"
+  console.log "=> #{process.env.LINDA_BASE}/#{ts.name}/type/say/value/hello"
+
+  ts.watch {type: 'say'}, (err, tuple) ->
+    if err
+      console.error err
+      return
     console.log tuple
-    exec "say #{tuple.data.value}"
+    if tuple.data?.value?
+      exec "say #{tuple.data.value}"
