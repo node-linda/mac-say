@@ -27,7 +27,7 @@ write {type: "say", value: "hello"} from following URL
 ## Run with your [linda-base](https://github.com/node-linda/node-linda-base)
 
     % export LINDA_BASE=http://node-linda-base.herokuapp.com
-    % LINDA_SPACE=test
+    % export LINDA_SPACE=test
     % npm start
 
 
