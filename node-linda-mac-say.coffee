@@ -15,9 +15,13 @@ linda.io.on 'connect', ->
   console.log "=> #{process.env.LINDA_BASE}/#{ts.name}/type/say/value/hello"
 
   ts.watch {type: 'say'}, (err, tuple) ->
+    return if tuple.data.response?
     if err
       console.error err
       return
     console.log tuple
     if tuple.data?.value?
-      exec "say #{tuple.data.value}"
+      exec "say #{tuple.data.value}", (err, stdout, stderr) ->
+        data = tuple.data
+        data.response = if err then "fail" else "success"
+        ts.write data

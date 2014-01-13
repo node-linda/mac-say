@@ -4,6 +4,7 @@ call Mac OSX's "say" command with [linda-socket.io](https://github.com/node-lind
 
 - watch tuple {type: "say"}
   - say tuple.value
+  - write {type: "say", value: value, result: ["success" or "fail"]}
 - https://github.com/node-linda/node-linda-mac-say
 
 
