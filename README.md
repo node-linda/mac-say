@@ -21,7 +21,7 @@ call Mac OSX's "say" command with [linda-socket.io](https://github.com/node-lind
 
 write {type: "say", value: "hello"} from following URL
 
-=> http://node-linda-base.herokuapp.com/test/type/say/value/hello
+=> http://node-linda-base.herokuapp.com/test/tuple?type=say&value=hello
 
 
 ## Run with your [linda-base](https://github.com/node-linda/node-linda-base)

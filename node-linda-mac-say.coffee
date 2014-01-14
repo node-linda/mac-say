@@ -12,7 +12,7 @@ linda.io.on 'connect', ->
 
   console.log "connect!!"
   console.log "watching {type: 'say'} in tuplespace '#{ts.name}'"
-  console.log "=> #{process.env.LINDA_BASE}/#{ts.name}/type/say/value/hello"
+  console.log "=> #{process.env.LINDA_BASE}/#{ts.name}/tuple?type=say&value=hello"
 
   ts.watch {type: 'say'}, (err, tuple) ->
     return if tuple.data.response?
