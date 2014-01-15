@@ -21,7 +21,11 @@ linda.io.on 'connect', ->
       return
     console.log tuple
     if tuple.data?.value?
-      exec "say #{tuple.data.value}", (err, stdout, stderr) ->
+      console.log cmd = "say '#{tuple.data.value.toString().sanitize()}'"
+      exec cmd, (err, stdout, stderr) ->
         data = tuple.data
         data.response = if err then "fail" else "success"
         ts.write data
+
+String::sanitize = ->
+  return @.replace(/[\`\"\'\r\n;\|><]/g, '')
