@@ -1,11 +1,11 @@
-node-linda-mac-say
-==================
+mac-say
+=======
 call Mac OSX's "say" command with [linda-socket.io](https://github.com/node-linda/linda-socket.io)
 
 - watch tuple {type: "say"}
   - say tuple.value
   - write {type: "say", value: value, result: ["success" or "fail"]}
-- https://github.com/node-linda/node-linda-mac-say
+- https://github.com/node-linda/mac-say
 
 
 ## Install Dependencies

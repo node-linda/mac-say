@@ -1,5 +1,5 @@
 {
-  "name": "node-linda-mac-say",
+  "name": "mac-say",
   "version": "0.0.0",
   "description": "call Mac OSX's \"say\" command with linda-socket.io",
   "main": "node-linda-mac-say.coffee",
