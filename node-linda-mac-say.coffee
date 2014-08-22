@@ -1,5 +1,5 @@
 process.env.LINDA_SPACE ||= "test"
-process.env.LINDA_BASE  ||= "http://node-linda-base.herokuapp.com"
+process.env.LINDA_BASE  ||= "http://linda-server.herokuapp.com"
 
 {exec} = require 'child_process'
 LindaClient = require('linda').Client

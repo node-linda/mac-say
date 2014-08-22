@@ -21,12 +21,12 @@ call Mac OSX's "say" command with [linda-socket.io](https://github.com/node-lind
 
 write {type: "say", value: "hello"} from following URL
 
-=> http://node-linda-base.herokuapp.com/test?type=say&value=hello
+=> http://linda-server.herokuapp.com/test?type=say&value=hello
 
 
-## Run with your [linda-base](https://github.com/node-linda/node-linda-base)
+## Run with your [linda-server](https://github.com/node-linda/linda)
 
-    % export LINDA_BASE=http://node-linda-base.herokuapp.com
+    % export LINDA_BASE=http://linda-server.herokuapp.com
     % export LINDA_SPACE=test
     % npm start
 

@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "coffee-script": "~1.6.3",
-    "linda": "~> 1.0",
+    "linda": "~> 1.1",
     "socket.io-client": "~> 1.0"
   }
 }
